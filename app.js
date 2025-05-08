@@ -5,9 +5,9 @@ const users = require('./routes/userRoutes')
 const products = require('./routes/productRoutes')
 
 
-app.use('/cart', carts);
-app.use('/user', users);
-app.use('/product', products);
+app.use('/api/cart', carts);
+app.use('/api/user', users);
+app.use('/api/product', products);
 
 
 app.listen(3000, (req, res) =>{
