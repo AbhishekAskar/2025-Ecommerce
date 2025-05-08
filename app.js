@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+
 const carts = require('./routes/cartRoutes')
 const users = require('./routes/userRoutes')
 const products = require('./routes/productRoutes')
 
+app.use(express.static('public'));
+app.use(express.json());
 
 app.use('/api/cart', carts);
 app.use('/api/user', users);

@@ -12,8 +12,9 @@ const getProductById = (req, res) => {
 };
 
 const postProduct = (req, res) => {
-    const result = productService.addNewProduct();
-    res.send(result);
+    // const result = productService.addNewProduct();
+    const data = req.body;
+    res.json({value:data.productName});
 };
 
 module.exports = {
